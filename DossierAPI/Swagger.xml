@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DossierAPI</name>
+    </assembly>
+    <members>
+        <member name="M:DossierAPI.Controllers.BilletsController.GetBillets">
+            <summary>
+            Récupération de tous les Billets
+            </summary>
+            <returns> Liste des Billets</returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.BilletsController.GetBillet(System.Guid)">
+            <summary>
+            Récupération d'un Billet dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id du Billet à récupérer</param>
+            <returns>Retourne le Billet demandé</returns>
+            <response code="200">Succès</response>
+            <response code="404">Billet non trouvé</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.BilletsController.PutBillet(System.Guid,DossierAPI.Models.Billet)">
+            <summary>
+            Mise à jour du Billet
+            </summary>
+            <param name="id">id du Billet à mettre à jour</param>
+            <param name="Billet">Nouvelles informations du Billet</param>
+            <returns></returns>
+            <response code="204">Billet mise à jour</response>
+            <response code="400">id différent de l'id du Billet envoyé</response>
+            <response code="404">la Billet n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.BilletsController.PostBillet(DossierAPI.Models.Billet)">
+            <summary>
+            Création d'un Billet
+            </summary>
+            <param name="Billet">Le Billet à créer</param>
+            <returns>Retourne le Billet créé</returns>
+            <response code="201">Le Billet a été créé</response>
+            <response code="409">Le Billet existe déjà</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.BilletsController.DeleteBillet(System.Guid)">
+            <summary>
+            Suppression du Billet
+            </summary>
+            <param name="id">id du Billet à supprimer</param>
+            <returns>Retourne le Billet supprimé</returns>
+            <response code="200">le Billet a été supprimé</response>
+            <response code="404">le Billet n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Récupération de toutes les catégories
+            </summary>
+            <returns> Liste des catégories</returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CategoriesController.GetCategorie(System.Guid)">
+            <summary>
+            Récupération d'une catégorie dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id de la catégorie à récupérer</param>
+            <returns>Retourne la catégorie demandé</returns>
+            <response code="200">Succès</response>
+            <response code="404">catégorie non trouvée</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CategoriesController.PutCategorie(System.Guid,DossierAPI.Models.Categorie)">
+            <summary>
+            Mise à jour de la catégorie
+            </summary>
+            <param name="id">id de la catégorie à mettre à jour</param>
+            <param name="catégorie">Nouvelles informations de la catégorie</param>
+            <returns></returns>
+            <response code="204">catégorie mis à jour</response>
+            <response code="400">id différent de l'id de la catégorie envoyée</response>
+            <response code="404">La catégorie n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CategoriesController.PostCategorie(DossierAPI.Models.Categorie)">
+            <summary>
+            Création d'une catégorie
+            </summary>
+            <param name="catégorie">catégorie à créer</param>
+            <returns>Retourne la catégorie créée</returns>
+            <response code="201">La catégorie a été créée</response>
+            <response code="409">La catégorie existe déjà</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CategoriesController.DeleteCategorie(System.Guid)">
+            <summary>
+            Suppression de la catégorie
+            </summary>
+            <param name="id">id de la catégorie à supprimer</param>
+            <returns>Retourne la catégorie supprimé</returns>
+            <response code="200">La catégorie a été supprimé</response>
+            <response code="404">La catégorie n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CompagniesController.GetCompagnies">
+            <summary>
+            Récupération de toutes les Compagnies
+            </summary>
+            <returns> Liste des Compagnies</returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CompagniesController.GetCompagnie(System.Guid)">
+            <summary>
+            Récupération d'une Compagnie dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id de la Compagnie à récupérer</param>
+            <returns>Retourne la Compagnie demandée</returns>
+            <response code="200">Succès</response>
+            <response code="404">Compagnie non trouvée</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CompagniesController.PutCompagnie(System.Guid,DossierAPI.Models.Compagnie)">
+            <summary>
+            Mise à jour de la Compagnie
+            </summary>
+            <param name="id">id de la Compagnie à mettre à jour</param>
+            <param name="Compagnie">Nouvelles informations de l"Compagnie</param>
+            <returns></returns>
+            <response code="204">Compagnie mise à jour</response>
+            <response code="400">id différent de l'id de la Compagnie envoyé</response>
+            <response code="404">la Compagnie n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CompagniesController.PostCompagnie(DossierAPI.Models.Compagnie)">
+            <summary>
+            Création d'une Compagnie
+            </summary>
+            <param name="Compagnie">Compagnie à créer</param>
+            <returns>Retourne la Compagnie créée</returns>
+            <response code="201">La Compagnie a été créée</response>
+            <response code="409">La Compagnie existe déjà</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.CompagniesController.DeleteCompagnie(System.Guid)">
+            <summary>
+            Suppression de la Compagnie
+            </summary>
+            <param name="id">id de la Compagnie à supprimer</param>
+            <returns>Retourne la Compagnie supprimée</returns>
+            <response code="200">la Compagnie a été supprimée</response>
+            <response code="404">la Compagnie n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.ReservationsController.GetReservations">
+            <summary>
+            Récupération de toutes les Reservations
+            </summary>
+            <returns> Liste des produits</returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.ReservationsController.GetReservation(System.Guid)">
+            <summary>
+            Récupération d'une Reservation dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id de la Reservation à récupérer</param>
+            <returns>Retourne la Reservation demandée</returns>
+            <response code="200">Succès</response>
+            <response code="404">Reservation non trouvée</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.ReservationsController.PutReservation(System.Guid,DossierAPI.Models.Reservation)">
+            <summary>
+            Mise à jour de la Reservation
+            </summary>
+            <param name="id">id de la Reservation à mettre à jour</param>
+            <param name="Reservation">Nouvelles informations sur la Reservation</param>
+            <returns></returns>
+            <response code="204">Reservation mise à jour</response>
+            <response code="400">id différent de la Reservation envoyée</response>
+            <response code="404">la Reservation n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.ReservationsController.PostReservation(DossierAPI.Models.Reservation)">
+            <summary>
+            Création d'une Reservation
+            </summary>
+            <param name="Reservation">Reservation à créer</param>
+            <returns>Retourne la Reservation créée</returns>
+            <response code="201">La Reservation a été créé</response>
+            <response code="409">La Reservation existe déjà</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.ReservationsController.DeleteReservation(System.Guid)">
+            <summary>
+            Suppression de la Reservation
+            </summary>
+            <param name="id">id de la Reservation à supprimer</param>
+            <returns>Retourne la Reservation supprimé</returns>
+            <response code="200">la Reservation a été supprimé</response>
+            <response code="404">la Reservation n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.VolsController.GetVols">
+            <summary>
+            Récupération de tous les Vols
+            </summary>
+            <returns> Liste des Vols</returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.VolsController.GetVol(System.Guid)">
+            <summary>
+            Récupération d'un Vol dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id du Vol à récupérer</param>
+            <returns>Retourne le Vol demandé</returns>
+            <response code="200">Succès</response>
+            <response code="404">Vol non trouvé</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.VolsController.PutVol(System.Guid,DossierAPI.Models.Vol)">
+            <summary>
+            Mise à jour du Vol
+            </summary>
+            <param name="id">id du Vol à mettre à jour</param>
+            <param name="Vol">Nouvelles informations du Vol</param>
+            <returns></returns>
+            <response code="204">Vol mise à jour</response>
+            <response code="400">id différent de l'id du Vol envoyé</response>
+            <response code="404">la Vol n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.VolsController.PostVol(DossierAPI.Models.Vol)">
+            <summary>
+            Création d'un Vol
+            </summary>
+            <param name="Vol">Vol à créer</param>
+            <returns>Retourne le Vol créé</returns>
+            <response code="201">Le Vol a été créé</response>
+            <response code="409">Le Vol existe déjà</response>
+        </member>
+        <member name="M:DossierAPI.Controllers.VolsController.DeleteVol(System.Guid)">
+            <summary>
+            Suppression du Vol
+            </summary>
+            <param name="id">id du Vol à supprimer</param>
+            <returns>Retourne le Vol supprimé</returns>
+            <response code="200">le Vol a été supprimé</response>
+            <response code="404">le Vol n'existe pas</response>
+        </member>
+        <member name="M:DossierAPI.DAL.DossierContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            A décommenter pour faire les tests unitaires et commenter pour lancer l'API
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:DossierAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DossierAPI.Migrations.Second">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Second.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Second.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Second.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DossierAPI.Migrations.Third">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Third.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Third.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Third.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DossierAPI.Migrations.Four">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Four.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Four.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Four.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:DossierAPI.Migrations.Five">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Five.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Five.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DossierAPI.Migrations.Five.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

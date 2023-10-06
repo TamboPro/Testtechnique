@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ClientAPI.Controllers.ClientsController.GetClients">
+            <summary>
+            Récupération de tous les clients
+            </summary>
+            <returns> Liste des clients triés par Nom et Prénom </returns>
+            <response code="200">Succès</response>
+        </member>
+        <member name="M:ClientAPI.Controllers.ClientsController.GetClient(System.Guid)">
+            <summary>
+            Récupération d'un client dont l'id est passé en paramètre
+            </summary>
+            <param name="id">id du client à récupérer</param>
+            <returns>Retourne le client demandé</returns>
+            <response code="200">Succès</response>
+            <response code="404">client non trouvé</response>
+        </member>
+        <member name="M:ClientAPI.Controllers.ClientsController.PutClient(System.Guid,ClientAPI.Models.Client)">
+            <summary>
+            Mise à jour d'un client
+            </summary>
+            <param name="id">id du client à mettre à jour</param>
+            <param name="client">Nouvelles informations du client</param>
+            <returns></returns>
+            <response code="204">client mis à jour</response>
+            <response code="400">id différent de l'id du client envoyé</response>
+            <response code="404">Le client n'existe pas</response>
+        </member>
+        <member name="M:ClientAPI.Controllers.ClientsController.PostClient(ClientAPI.Models.Client)">
+            <summary>
+            Création d'un client
+            </summary>
+            <param name="client">client à créer</param>
+            <returns>Retourne le client créé</returns>
+            <response code="201">Le client a été créé</response>
+            <response code="409">Le client existe déjà</response>
+        </member>
+        <member name="M:ClientAPI.Controllers.ClientsController.DeleteClient(System.Guid)">
+            <summary>
+            Suppression d'un client
+            </summary>
+            <param name="id">id du client à supprimer</param>
+            <returns>Retourne le client supprimé</returns>
+            <response code="200">Le client a été supprimé</response>
+            <response code="404">Le client n'existe pas</response>
+        </member>
+        <member name="M:ClientAPI.DAL.ClientContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            A décommenter pour faire les tests unitaires et commenter pour lancer l'API
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:ClientAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ClientAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ClientAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ClientAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
